@@ -1,0 +1,12 @@
+#jobs
+  .job
+    %h1= @job.title
+    %p= @job.company
+    %p= @job.description
+    %button.btn-default= link_to "Aplique al trabajo", @job.url
+
+
+#links
+  = link_to "Atrás", root_path, class: "btn btn-sm btn-default"
+  = link_to "Editar", edit_job_path(@job), class: "btn btn-sm btn-default"
+  = link_to "Eliminar", job_path(@job), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-default"
